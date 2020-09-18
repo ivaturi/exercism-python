@@ -1,8 +1,3 @@
-import numpy as np
-
-# greater than or equal to every element in its row 
-# less than or equal to every element in its column.
-
 def saddle_points(matrix):
   if len(set(map(len, matrix))) > 1:
       raise ValueError("Irregular matrix!")
