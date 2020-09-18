@@ -1,7 +1,6 @@
 def is_isogram(string):
 
-    # brute force
-    c = 'abcdefghijklmnopqrstuvwxyz'
-    s = string.lower()
-    check = sum([s.count(l) > 1 for l in s if l in c]) < 1
-    return bool(check)
+    string_lc = string.lower()
+    repeat_ok = ['-', ' ']
+    char_counts = [string_lc.count(char) > 1  for char in set(string_lc) if char not in repeat_ok]
+    return sum(char_counts) == 0 
